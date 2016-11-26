@@ -70,16 +70,16 @@ char CMyString::operator[](int nIndex) const
 int CMyString::operator==(const CMyString &rhs)
 {
 	if (m_pszData != NULL&&rhs.m_pszData != NULL)
-		if (strcmp(m_pszData, rhs.m_pszData) == true)
-			return true;
-	return false;
+		if (strcmp(m_pszData, rhs.m_pszData) == 0)
+			return 1;
+	return 0;
 }
 int CMyString::operator!=(const CMyString &rhs)
 {
 	if (m_pszData != NULL&&rhs.m_pszData != NULL)
-		if (strcmp(m_pszData, rhs.m_pszData) == true)
-			return false;
-	return true;
+		if (strcmp(m_pszData, rhs.m_pszData) == 0)
+			return 0;
+	return 1;
 }
 
 

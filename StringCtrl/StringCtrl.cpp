@@ -9,14 +9,10 @@ int _tmain(int argc,_TCHAR* argv[])
 {
 	CMyString strData, strTest;
 	strData.SetString("Hello");
-	strTest.SetString("World");
+	strTest.SetString("Hello");
 
-	CMyString strNewData(strData);
-	cout << strNewData.GetString() << endl;
-
-	strNewData = strTest;
-	cout << strNewData.GetString() << endl;
-
+	cout << strData.GetString() << endl;
+	(cout << (strData != strTest))<< endl;
 
     return 0;
 }
